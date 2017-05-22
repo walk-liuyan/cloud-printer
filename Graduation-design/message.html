@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>留言板</title>
+		<link rel="import" href="css_jspage.html">
+	</head>
+
+	<body>
+		<div class="header">
+
+		</div>
+		<br />
+		<div class="messagebigbox">
+			<h2>匿名制留言</h2>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了让广大用户有良好的用户体验，同时为了督促我们文印店更加努力负责的为您提供优质的服务，特此开通匿名制的留言板，相互督促本店在打印质量、销售品质以及运送速度及态度方面各项事宜给予真实的反馈。In order to let the users have a good user experience, at the same time in order to urge us to work harder for the print shop to provide you with quality service, hereby open message board anonymity, mutual feedback to supervise the store to give true in print quality, sales quality and delivery speed and attitude of the matters.</p>
+			<div class="namemess">
+				昵称：<input type="text" id="name" class="nametext">
+			</div>
+			<div class="messagebox">
+				<input type="textarea" id="memo" class="message">
+			</div>
+			<input class="messbtn" type="button" value="留言">
+
+			<hr>
+
+			<table id="datatable" border="1" class="showmess" style="display: none">
+			</table>
+			<table id="msgList" border="1" width="100%">
+				<thead>
+				<tr>
+					<th>昵称</th>
+					<th>内容</th>
+					<th>留言时间</th>
+				</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+			<p id="msg"></p>
+		</div>
+		<script src="../bower_components/lodash/dist/lodash.min.js"></script>
+		<script src="../bower_components/moment/moment.js"></script>
+		<script src="../bower_components/moment/locale/zh-cn.js"></script>
+		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="../bower_components/leancloud-storage/dist/av-min.js"></script>
+		<script src="js/common.js"></script>
+		<!--前端项目里面使用 LeanCloud JavaScript SDK，那么可以在页面加载的时候调用一下初始化的函数-->
+		<script src="js/message.js"></script>
+	</body>
+
+<!--	<script type="text/javascript">
+		var datatable = null;
+		var db = openDatabase("MyData", "", "My Database", 1024 * 100);
+
+		function init() {
+			datatable = document.getElementById("datatable");
+			showAllData();
+		}
+
+		function removeAllData() {
+			for(var i = datatable.childNodes.length - 1; i >= 0; i&#45;&#45;) {
+				datatable.removeChild(datatable.childNodes[i]);
+			}
+			var tr = document.createElement("tr");
+			var th1 = document.createElement("th");
+			var th2 = document.createElement("th");
+			var th3 = document.createElement("th");
+			th1.innerHTML = "姓名";
+			th2.innerHTML = "留言";
+			th3.innerHTML = "时间";
+			tr.appendChild(th1);
+			tr.appendChild(th2);
+			tr.appendChild(th3);
+			datatable.appendChild(tr);
+			localStorage.clear();
+		}
+
+		function showData(row) {
+			var tr = document.createElement("tr");
+			var td1 = document.createElement("td");
+			td1.innerHTML = row.name;
+			var td2 = document.createElement("td");
+			td2.innerHTML = row.message;
+			var td3 = document.createElement("td");
+			var t = new Date();
+			t.setTime(row.time);
+			td3.innerHTML = t.toLocaleDateString() + " " + t.toLocaleTimeString();
+			tr.appendChild(td1);
+			tr.appendChild(td2);
+			tr.appendChild(td3);
+			datatable.appendChild(tr);
+		}
+
+		function showAllData() {
+			db.transaction(function(tx) {
+				tx.executeSql("CREATE TABLE IF NOT EXISTS MyData(name TEXT,message TEXT,time INTEGER)");
+				tx.executeSql("SELECT * FROM MyData", [], function(tx, rs) {
+					removeAllData();
+					for(var i = 0; i < rs.rows.length; i++) {
+						showData(rs.rows.item(i));
+					}
+				})
+			})
+		}
+
+		function addData(name, message, time) {
+			db.transaction(function(tx) {
+				tx.executeSql("INSERT INTO MyData VALUES(?,?,?)", [name, message, time], function(tx, rs) {
+						alert("留言成功");
+					},
+					function(tx, error) {
+						alert(error.source + "::" + error.message);
+					}
+				)
+			})
+		}
+
+		function saveData() {
+			var name = document.getElementById("name").value;
+			var memo = document.getElementById("memo").value;
+			var time = new Date().getTime();
+			addData(name, memo, time);
+			showAllData();
+		}
+	</script>-->
+
+</html>

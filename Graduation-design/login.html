@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="import" href="css_jspage.html">
+</head>
+<body>
+
+<div class="header">
+
+</div>
+<div class="login_box">
+    <div class="namemess">
+        昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：   <input type="text" name="username" id="username" value="" placeholder="用户名长度为3-12" required pattern="[A-z]{3,12}" />
+    </div>
+    <div class="namemess">
+        密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码： <input type="password" name="password" id="password" value="" placeholder="密码必须是数字与字母组合" required pattern="[A-Za-z].[0-9]|[0-9].*[A-Za-z]" />
+    </div>
+
+    <input type="button" value="登录" class="login_btn"/><input type="button" value="去注册" class="goto_regist"/>
+</div>
+</body>
+<script src="//cdn.bootcss.com/lodash.js/4.17.4/lodash.min.js"></script>
+<script src="//cdn.bootcss.com/moment.js/2.17.1/moment.min.js"></script>
+<script src="//cdn.bootcss.com/moment.js/2.17.1/locale/zh-cn.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="//cdn1.lncld.net/static/js/2.1.1/av-min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/user-action.js"></script>
+</html>

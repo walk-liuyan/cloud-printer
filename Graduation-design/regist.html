@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="import" href="css_jspage.html">
+<!--
+    <script src="//cdn.bootcss.com/parsley.js/2.6.2/parsley.min.js"></script>
+-->
+
+
+
+</head>
+
+<body>
+<div class="header">
+
+</div>
+<div class="regist_box">
+    <div class="namemess">
+        邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：  <input type="email" name="email" id="email" value="" placeholder="输入您的常用邮箱" />
+    </div>
+    <div class="namemess">
+        昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：  <input type="text" name="username" id="username" value="" placeholder="用户名长度为3-12" required pattern="[A-z]{3,12}" />
+    </div>
+    <div class="namemess">
+        密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码： <input type="password" name="password" id="password" value="" placeholder="密码必须是数字与字母组合" required pattern="[A-Za-z].[0-9]|[0-9].*[A-Za-z]" />
+    </div>
+    <div class="namemess">
+        验证密码：  <input type="password" name="password" id="passwordAgain" value="" placeholder="密码必须是数字与字母组合" required pattern="[A-Za-z].[0-9]|[0-9].*[A-Za-z]" />
+    </div>
+    <input type="button" value="注册" class="regist_btn"/>
+</div>
+
+<!--	<div class="header">
+
+    </div><div class="regist_box">
+        <form action="#" method="post" class="">
+
+            <table>
+
+                <tr>
+                    <td>用户名：</td>
+                    <td>
+                        <input type="text" name="username" id="username" value="" placeholder="用户名长度为3-12" required pattern="[A-z]{3,12}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>密&nbsp;码：</td>
+                    <td>
+                        <input type="password" name="password" id="password" value="" placeholder="密码必须是数字与字母组合" required pattern="[A-Za-z].[0-9]|[0-9].*[A-Za-z]" />
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td>验证密码：</td>
+                    <td>
+                        <input type="password" name="password" id="password" value="" placeholder="密码必须是数字与字母组合" required pattern="[A-Za-z].[0-9]|[0-9].*[A-Za-z]" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>邮&nbsp;箱：</td>
+                    <td>
+                        <input type="email" name="email" id="email" value="" placeholder="输入您的常用邮箱" />
+                    </td>
+                </tr>
+
+            </table>
+            <tr>
+
+                <td>
+                    <input type="submit" value="注册" />
+                </td>
+            </tr>
+
+        </form>
+
+    </div>-->
+<!--	<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+<div class="modal-dialog modal-sm" role="document">
+<div class="modal-content">
+  <table>
+<br />
+                <tr>
+                    <td>用户名：</td>
+                    <td>
+                        <input type="text" name="username" id="username" value="" placeholder="用户名长度为3-12" required pattern="[A-z]{3,12}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>密&nbsp;码：</td>
+                    <td>
+                        <input type="password" name="password" id="password" value="" placeholder="密码必须是数字与字母组合" required pattern="[A-Za-z].[0-9]|[0-9].*[A-Za-z]" />
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td>验证密码：</td>
+                    <td>
+                        <input type="password" name="password" id="passwordAgain" value="" placeholder="密码必须是数字与字母组合" required pattern="[A-Za-z].[0-9]|[0-9].*[A-Za-z]" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>邮&nbsp;箱：</td>
+                    <td>
+                        <input type="email" name="email" id="email" value="" placeholder="输入您的常用邮箱" />
+                    </td>
+                </tr>
+
+            </table>
+
+</div>
+</div>
+</div>-->
+<script src="//cdn.bootcss.com/lodash.js/4.17.4/lodash.min.js"></script>
+<script src="//cdn.bootcss.com/moment.js/2.17.1/moment.min.js"></script>
+<script src="//cdn.bootcss.com/moment.js/2.17.1/locale/zh-cn.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="//cdn1.lncld.net/static/js/2.1.1/av-min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/user-action.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,419 @@
+//淘宝样式初始化
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+body,
+button,
+input,
+select,
+textarea {
+    font: 12px/1.5tahoma, arial, \5b8b\4f53;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var {
+    font-style: normal;
+}
+code,
+kbd,
+pre,
+samp {
+    font-family: couriernew, courier, monospace;
+}
+small {
+    font-size: 12px;
+}
+ul,
+ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+sup {
+    vertical-align: text-top;
+}
+sub {
+    vertical-align: text-bottom;
+}
+legend {
+    color: #000;
+}
+fieldset,
+img {
+    border: 0;
+}
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+//over
+header {
+    position: absolute;
+    z-index: 1;
+    line-height: 55px;
+    height: 55px;
+    width: 100%;
+    background: #70c570;
+    .search {
+        margin-top: 13px;
+        margin-left: 50px;
+        float: left;
+        width: 30px;
+        height: 30px;
+        background: url("../img/search.png") no-repeat;
+    }
+    .ui-widget {
+        float: left;
+        position: absolute;
+        z-index: 999;
+        right: 70px;
+        #tags {
+            height: 22px;
+            width: 140px;
+        }
+    }
+    .logo {
+        float: left;
+        margin-left: 100px;
+        width: 250px;
+        height: 55px;
+        background: url(../img/logo.png)no-repeat;
+    }
+    #menu {
+        margin-left: 100px;
+        margin-top: 13px;
+        float: left;
+        width: 550px;
+        height: 55px;
+        line-height: 55px;
+        font-family: Arial;
+        font-size: 15px;
+        .index {
+            border-bottom: 2px solid #4d8e4e;
+            background: #619f60;
+        }
+    }
+    #menu ul {
+        display: block;
+        width: 100%;
+        margin: 0;
+        position: relative;
+    }
+    #menu ul li {
+        margin: 0 10px;
+        border-radius: 5px;
+        list-style-type: none;
+        float: left;
+        height: 27px;
+        width: 70px;
+        line-height: 27px;
+        text-align: center;
+        background: #70c570;
+        color: white;
+    }
+    #menu ul li ul {
+        display: list-item;
+        margin: 0;
+        position: relative;
+        left: -10px;
+        font-size: 12px;
+        display: none;
+        li {
+            width: 120px;
+            height: 27px;
+            letter-spacing: 3px;
+        }
+    }
+    #menu ul li a {
+        text-decoration: none;
+        color: white;
+    }
+    #menu ul li:hover {
+        background: #e56921;
+        border-bottom: 2px solid #d55c2f;
+        color: #000;
+        cursor: pointer;
+    }
+    #menu ul li:hover ul {
+        display: list-item;
+    }
+    #menu ul li:hover ul li:hover {
+        background: 868686;
+        color: #ff5588;
+        cursor: pointer;
+    }
+}
+footer {
+    background: #70c570 url("../img/footbg.png") repeat-x;
+    width: 100%;
+    height: 150px;
+    padding: 30px 0 0 160px;
+    .logoshow {
+        float: left;
+        background: url(../img/logo.png)no-repeat;
+        width: 290px;
+        height: 100px;
+        .phonediv {
+            color: white;
+            letter-spacing: 2px;
+            font-size: 15px;
+            margin-top: 70px;
+            span {
+                font-size: 17px;
+            }
+        }
+    }
+}
+.india-container {
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    img {
+        margin: 0;
+        height: 50%;
+    }
+}
+.title {
+    border-radius: 5px;
+    margin-left: 100px;
+    text-align: center;
+    line-height: 50px;
+    width: 300px;
+    height: 50px;
+    background: #ececec;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+.copycon {
+    position: absolute;
+    top: 475px;
+    padding-top: 50px;
+    background: #f4f4f4;
+    width: 100%;
+    height: 900px;
+    .step1 {
+        margin: 0 auto;
+        border-radius: 5px;
+        text-align: center;
+        width: 200px;
+        color: white;
+        background: #85d186;
+        height: 30px;
+        line-height: 30px;
+    }
+    .step1:hover {
+        cursor: pointer;
+        background: #e56a2e;
+    }
+    .step1_con {
+        width: 85%;
+        padding-top: 40px;
+        padding-left: 20px;
+        margin: 0 auto;
+        height: 300px;
+        .step_con1 {
+            float: left;
+            margin-right: 30px;
+            padding: 0 15px;
+            height: 260px;
+            width: 230px;
+            background: white;
+            border-bottom: 3px solid gainsboro;
+        }
+        .step_con2,
+        .step_con3,
+        .step_con4 {
+            background: #f8f8f8;
+        }
+        .step_title {
+            position: relative;
+            left: 50px;
+            bottom: -20px;
+            display: block;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            color: white;
+            width: 100px;
+            height: 30px;
+            background: #e56a2e;
+        }
+        .stepimg {
+            margin: 20px auto 0;
+            width: 60px;
+            height: 60px;
+            background: url("../img/step.png") no-repeat;
+        }
+        .step2img {
+            background: url(../img/step2.png)no-repeat;
+        }
+        .step3img {
+            background: url("../img/step3.png") no-repeat;
+        }
+        .step4img {
+            background: url(../img/step4.PNG)no-repeat;
+        }
+        .chinesespan {
+            padding-top: 20px;
+        }
+        .englishsapn {
+            padding-top: 20px;
+        }
+    }
+    .step2 {
+        margin-top: 70px;
+    }
+}
+.printsale {
+    position: absolute;
+    top: 1375px;
+    background: #ececec url("../img/tiaobg.png") repeat-x;
+    width: 100%;
+    height: 900px;
+    .title1 {
+        margin-top: 50px;
+        background: #F4F4F4;
+    }
+}
+.messagebigbox {
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    h2 {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+}
+.namemess {
+    font-size: 18px;
+    height: 55px;
+    letter-spacing: 2px;
+    line-height: 55px;
+    .nametext {
+        height: 25px;
+        line-height: 25px;
+    }
+}
+.message {
+    width: 100%;
+    height: 200px;
+}
+.messbtn {
+    float: right;
+    width: 80px;
+    height: 30px;
+}
+.showmess {
+    margin-top: 50px;
+    width: 100%;
+    th {
+        text-align: center;
+        height: 35px;
+        line-height: 35px;
+    }
+    td {
+        height: 30px;
+        line-height: 30px;
+    }
+    td:first-child {
+        width: 20%;
+    }
+    td:last-child {
+        width: 20%;
+    }
+}
+.bigcopybox {
+    padding-top: 100px;
+    width: 100%;
+    height: 600px;
+    .copybox {
+        margin: 20px auto;
+        width: 80%;
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 22px;
+            letter-spacing: 3px;
+        }
+        span {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+            height: 30px;
+            line-height: 30px;
+        }
+        input {
+            width: 100%;
+            margin-bottom: 20px;
+            height: 30px;
+            line-height: 30px;
+        }
+    }
+}
+.paintpagebox {
+    width: 100%;
+    height: 500px;
+
+    
+}
+.paintpage{
+    width: 80%;
+    
+}
+.regist_box{  width: 60%;
+    margin: 0 auto;
+    margin-top:60px;
+}
