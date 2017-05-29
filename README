@@ -1,0 +1,6 @@
+客户端：/client
+技术使用：vue+vux+router+sass
+预览地址：http://code.hidoge.cn/demos/cloud_photo_print/client/#/
+管理端:/admin-dev
+技术使用：vue+iview+router+sass
+预览地址http://code.hidoge.cn/demos/cloud_photo_print/admin-dev/#/
