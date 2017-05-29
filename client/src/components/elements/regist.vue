@@ -68,7 +68,7 @@
         this.showPlugin(string)
         setTimeout(() => {
           this.$vux.alert.hide()
-        }, 2000)
+        }, 4000)
       },
       handleSubmit() {
         /* 判断当前输入框中的用户名和密码，邮箱是否为空，不为空则执行一下代码*/
@@ -80,7 +80,7 @@
             email: this.email,
             username: this.username,
             password: this.password,
-            avatar: this.thumbnail,
+            avatar: this.thumbnail ? this.thumbnail : 'http://oo6bhdayj.bkt.clouddn.com/FgzNI3WqTOj8wrh3Y1jb6iWCR33j',
             mobilePhoneNumber: this.mobilePhoneNumber,
           }).then((res) => {
             /* 存储完成以后，将其直接登录*/
@@ -96,10 +96,20 @@
                 })
               }).catch((error) => {
                 console.log('error', error)
+                console.log(JSON.parse(JSON.stringify(error)))
                 this.showPluginAuto('error')
               })
           }).catch((err) => {
             console.log('err', err)
+            const errMess = JSON.parse(JSON.stringify(err)).code
+            console.log(errMess)
+            if (errMess === 214) {
+              this.showPluginAuto('此号码已经注册')
+            } else if (errMess === 202) {
+              this.showPluginAuto('此用户名已经被使用')
+            } else {
+              this.showPluginAuto(err)
+            }
           })
         } else {
           this.showPluginAuto('请填写正确信息')
@@ -109,7 +119,7 @@
       uploadComplete(status, result) {
         /* 当上传状态等于200时，说明上传成功，则当下的头像值为上传至七牛的地址*/
         if (status === 200) {
-          this.thumbnail = `http://oo6bhdayj.bkt.clouddn.com/${result.key}`
+          this.thumbnail = `http://j.bkt.con.com/${result.key}`
         } else {
           this.showPluginAuto('上传错误')
         }

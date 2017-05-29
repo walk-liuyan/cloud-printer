@@ -2,11 +2,11 @@
     <div>
         <group>
             <div v-for="(item, index) in list">
-                <img class="previewer-demo-img tc m-5 l" :src="item.src" width="46%" @click="show()">
+                <img class="previewer-demo-img tc m-5 l" :src="item.src" width="46%" @click="show(index)">
                 <div v-transfer-dom>
                     <x-dialog v-model="showHideOnBlur" class="dialog-demo" hide-on-blur>
                         <div class="img-box">
-                            <img :src="item.src" style="max-width:100%">
+                            <img :src="listPic" style="max-width:100%">
                         </div>
                         <div @click="showHideOnBlur=false">
                             <span class="vux-close"></span>
@@ -90,6 +90,7 @@
         list: [{
           src: null,
         }],
+        listPic: null,
         objectId: null,
         avatar: null,
         username: null,
@@ -100,8 +101,10 @@
       }
     },
     methods: {
-      show() {
+      show(i) {
+        console.log(i)
         this.showHideOnBlur = true
+        this.listPic = this.list[i].src
       },
       success(src, ele) {
         console.log('success load', src)
